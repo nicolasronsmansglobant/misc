@@ -1,0 +1,45 @@
+<div class="card  card--single  col-xs-12">
+  <div class="card-container">
+    <div class="clearfix">
+      <div class="pull-right">
+        <img ng-src="{{player.photo}}" alt="{{player.fullname}}" width="200">
+      </div>
+      <div class="pull-left">
+        <header class="card-header">
+          <h2 class="card-title">
+            {{player.fullname}}
+          </h2>
+        </header>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12  col-sm-4">
+        <h3>Position</h3>
+        <p>
+          {{player.position}}
+        </p>
+      </div>
+      <div class="col-xs-12  col-sm-4">
+        <h3>Nationality</h3>
+        <p>
+          {{player.nationality}}
+        </p>
+      </div>
+      <div class="col-xs-12  col-sm-4">
+        <h3>Age</h3>
+        <p>
+          {{player.age}}
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12  text-right">
+        <a href="/#/" title="Back to the Team" class="btn  btn-default">Back to the Team</a>
+        <button title="remove" class="btn  btn-danger" ng-click="remove(player.slug)">remove</button>
+        <a href="/#/player/edit/{{player.slug}}" title="edit" class="btn  btn-primary">edit</a>
+      </div>
+    </div>
+  </div>
+</div>

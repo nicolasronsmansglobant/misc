@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button title="Reset" class="btn  btn-warning" ng-click="reset()">Reset</button>
+    <a href="/#/player/add" title="Add new Player" class="btn  btn-primary">Add new Player</a>
+    <hr>
+  </div>
+</div>
+<ul class="row  list-unstyled">
+  <li class="card  col-xs-6  col-sm-4  col-md-3" ng-repeat="(key, player) in team">
+    <div class="card-container">
+      <a href="/#/player/view/{{key}}" title="{{player.fullname}}" style="background-image: url({{player.photo}});" class="card-image">
+        <span class="card-position">{{player.position}}</span>
+      </a>
+      <div>
+        <h3>
+          <a href="/#/player/view/{{key}}" title="{{player.fullname}}">{{player.fullname}}</a>
+        </h3>
+      </div>
+      <div class="card-actions  text-right">
+        <hr>
+        <button title="Remove" class="btn  btn-danger" ng-click="remove(key)">Remove</button>
+        <a href="/#/player/edit/{{key}}" title="Edit" class="btn  btn-primary">Edit</a>
+      </div>
+    </div>
+  </li>
+</ul>

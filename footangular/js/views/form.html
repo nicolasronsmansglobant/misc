@@ -1,0 +1,49 @@
+<div class="card  card--single  col-xs-12">
+  <div class="card-container">
+    <h2 ng-show="formType=='edit'">{{player.fullname}}</h2>
+    <h2 ng-show="formType=='add'">Add new Player</h2>
+
+    <form class="row">
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="fullname">Fullname</label><br>
+        <input type="text" id="fullname" class="form-control" ng-model="player.fullname" required>
+      </div>
+
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="slug">Slug</label><br>
+        <input type="text" id="slug" class="form-control" ng-model="player.slug" required>
+      </div>
+
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="position">Position</label><br>
+        <input type="text" id="position" class="form-control" ng-model="player.position" required>
+      </div>
+
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="nationality">nationality</label><br>
+        <input type="text" id="nationality" class="form-control" ng-model="player.nationality" required>
+      </div>
+
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="age">Age</label><br>
+        <input type="number" id="age" class="form-control" ng-model="player.age" required>
+      </div>
+
+      <div class="form-group  col-xs-12  col-sm-4">
+        <label for="photo">Photo</label><br>
+        <input type="text" id="photo" class="form-control" ng-model="player.photo" required>
+      </div>
+
+      <div class="col-xs-12">
+        <hr>
+      </div>
+
+      <div class="col-xs-12  text-right">
+        <a href="/#/" title="Cancel" class="btn  btn-default">Cancel</a>
+        <button class="btn  btn-warning" ng-click="reset();" ng-show="formType=='edit'">Reset</button>
+        <input type="submit" value="Update" class="btn  btn-success" ng-click="update();" ng-show="formType=='edit'">
+        <input type="submit" value="Add" class="btn  btn-success" ng-click="add();" ng-show="formType=='add'">
+      </div>
+    </form>
+  </div>
+</div>
