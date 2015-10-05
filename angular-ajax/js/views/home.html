@@ -1,0 +1,12 @@
+<button ng-click="generateUser()">Generate User</button>
+
+<hr>
+
+<div ng-show="user">
+  <h2 style="text-transform: capitalize;">{{user.name}}</h2>
+  <p>
+    Gender: {{user.gender}}
+  </p>
+</div>
+
+<img src="img/loading.gif" ng-show="loading">
